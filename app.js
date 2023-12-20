@@ -6,12 +6,13 @@ app.use(express.json());
 const librosRouter = require('./routes/libros');
 
 // Importamos el Middleware Error Handler
-const errorHandler = require('./middlewares/errorHandler');
+const errorHandler = require('./middleware/errorHandler');
 
 app.use('/libros', librosRouter);
 
 app.use(errorHandler);
 
 app.listen(3000, () => {
-console.log('Servidor iniciado en el puerto 3000');
+    
+    console.log('Servidor iniciado en el puerto 3000');
 });
